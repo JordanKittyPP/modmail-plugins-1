@@ -58,7 +58,7 @@ class Suggest(commands.Cog):
                     suggestions = await self.coll.find_one({"_id": "suggestions"}) or {}
                     next_id = suggestions.get("next_id", 1)
 
-                    embed = discord.Embed(color=0x59E9FF)
+                    embed = discord.Embed(color=0xf54336)
                     embed.set_author(name=f"Suggestion #{next_id}: Waiting")
                     embed.set_thumbnail(url=ctx.author.avatar.url)
                     embed.add_field(
@@ -236,7 +236,7 @@ class Suggest(commands.Cog):
             upsert=True,
         )
         embed = discord.Embed(
-            title=f"Set suggestion channel to #{channel}.", color=0x4DFF73
+            title=f"Set suggestion channel to #{channel}.", color=0xf54336
         )
         embed.set_author(name="Success!")
         embed.set_footer(text="Task succeeded successfully.")
@@ -253,7 +253,7 @@ class Suggest(commands.Cog):
         embed = discord.Embed(
             title=f"The suggestion channel is: #{suggestion_channel}",
             description="To change it, use [p]setsuggestchannel.",
-            color=0x4DFF73,
+            color=0xf54336,
         )
         await ctx.send(embed=embed)
 
@@ -272,7 +272,7 @@ class Suggest(commands.Cog):
             {"$set": {"reaction-emojis": {"emojis": [i.id for i in emojis]}}},
             upsert=True,
         )
-        embed = discord.Embed(title=f"Set emojis.", color=0x4DFF73)
+        embed = discord.Embed(title=f"Set emojis.", color=0xf54336)
         embed.set_author(name="Success!")
         embed.set_footer(text="Task succeeded successfully.")
         await ctx.send(embed=embed)
