@@ -95,7 +95,13 @@ class FortniteShop(commands.Cog):
                             (name, days)
                         )
 
-            embed = discord.Embed(colour=0x2B2D31)
+            def create_embed() -> discord.Embed:
+                em = discord.Embed(colour=0x2B2D31)
+                em.set_footer(text="Updated")
+                em.timestamp = updated
+                return em
+
+            embeds = [create_embed()]
             keys = ["Outfits", "Emotes", "Pickaxes", "Gliders", "Backpacks"]
             for key in keys:
                 values = cosmetics.get(key, [])
@@ -107,7 +113,15 @@ class FortniteShop(commands.Cog):
                         length += 2
                     length += len(name)
                     if length > 1024:
-                        embed.add_field(name=key, value=", ".join(page), inline=False)
+                        embeds[-1].add_field(
+                            name=key, value=", ".join(page), inline=False
+                        )
+                        if len(embeds[-1]) > 6000:
+                            embeds[-1].remove_field(-1)
+                            embeds.append(create_embed())
+                            embeds[-1].add_field(
+                                name=key, value=", ".join(page), inline=False
+                            )
                         if pages == 0:
                             key = f"{key} continued"
                         pages += 1
@@ -115,10 +129,18 @@ class FortniteShop(commands.Cog):
                         page = []
                     page.append(name)
                 if page:
-                    embed.add_field(name=key, value=", ".join(page), inline=False)
-            embed.set_footer(text="Updated")
-            embed.timestamp = updated
-            await channel.send(embed=embed)
+                    embeds[-1].add_field(name=key, value=", ".join(page), inline=False)
+                    if len(embeds[-1]) > 6000:
+                        embeds[-1].remove_field(-1)
+                        embeds.append(create_embed())
+                        embeds[-1].add_field(
+                            name=key, value=", ".join(page), inline=False
+                        )
+            for i, embed in enumerate(embeds):
+                if i + 1 != len(embeds):
+                    embed.remove_footer()
+                    embed.timestamp = None
+                await channel.send(embed=embed)
             break
 
 
