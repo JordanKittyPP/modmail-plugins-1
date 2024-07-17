@@ -3,6 +3,7 @@ Altitude Odin
 Xenohunter Odin
 Tactiplay Odin
 Rune Stone Odin
+Comet Odin
 Glitchpop Odin
 Nitro Odin
 Topotek Odin
@@ -20,14 +21,18 @@ Sentinels of Light Odin
 Schema Odin
 Lycan's Bane Odin
 Reaver Odin
+Sovereign Odin
 Standard Odin
+Evori Dreamwings Odin
 Freehand Odin
 Aerosol Odin
+Fortune's Hand Odin
 BlastX Odin
 VALORANT GO! Vol. 2 Ares
 Aristocrat Ares
 Gaia's Vengeance Ares
 Endeavour Ares
+Bumble Brigade Ares
 Nebula Ares
 Doodle Buds Ares
 Singularity Ares
@@ -39,6 +44,7 @@ Infantry Ares
 Goldwing Ares
 Outpost Ares
 Prism Ares
+Aquatica Ares
 Monstrocity Ares
 Nunca Olvidados Ares
 Celestial Ares
@@ -67,10 +73,12 @@ Araxys Vandal
 Neptune Vandal
 Aristocrat Vandal
 Gaia's Vengeance Vandal
+MK.VII Liberty Vandal
 Endeavour Vandal
 Champions 2021 Vandal
 Champions 2023 Vandal
 Origin Vandal
+Comet Vandal
 Starlit Odyssey Vandal
 Glitchpop Vandal
 ChronoVoid Vandal
@@ -86,13 +94,17 @@ Team Ace Vandal
 Ruin Vandal
 .EXE Vandal
 .SYS Vandal
+Primordium Vandal
 Horizon Vandal
 Prime Vandal
+XERØFANG Vandal 
 Avalanche Vandal
+Bubble Pop Vandal
 Guardrail Vandal
 Black.Market Vandal
 Prism II Vandal
 K/TAC Vandal
+Aemondir Vandal
 Monstrocity Vandal
 Nunca Olvidados Vandal
 Luxe Vandal
@@ -119,10 +131,12 @@ Tethered Realms Vandal
 Cavalier Vandal
 Titanmail Vandal
 Standard Vandal
+Evori Dreamwings Vandal
 NO LIMITS Vandal
 Sandswept Vandal
 Depths Vandal
 Ego Vandal
+Holomoku Vandal
 Wasteland Vandal
 Winterwunderland Vandal
 Araxys Bulldog
@@ -130,6 +144,7 @@ Radiant Entertainment System Bulldog
 Aristocrat Bulldog
 Endeavour Bulldog
 Spectrum Bulldog
+Bumble Brigade Bulldog
 Tactiplay Bulldog
 Striker Bulldog
 Rune Stone Bulldog
@@ -144,8 +159,10 @@ Digihex Bulldog
 Horizon Bulldog
 Black.Market Bulldog
 Bound Bulldog
+Retrowave Bulldog
 K/TAC Bulldog
 Couture Bulldog
+Aemondir Bulldog
 Nunca Olvidados Bulldog
 Genesis Bulldog
 Libretto Bulldog
@@ -164,6 +181,7 @@ Gridcrash Bulldog
 NO LIMITS Bulldog
 Convex Bulldog
 Depths Bulldog
+Holomoku Bulldog
 Varnish Bulldog
 Task Force 809 Phantom
 RGX 11z Pro Phantom
@@ -193,6 +211,7 @@ Team Ace Phantom
 Topotek Phantom
 Neo Frontier Phantom
 Soulstrife Phantom
+Primordium Phantom
 Prime//2.0 Phantom
 Avalanche Phantom
 Bound Phantom
@@ -212,6 +231,7 @@ Galleria Phantom
 Silvanus Phantom
 Ion Phantom
 Oni Phantom
+Switchback Phantom
 9 Lives Phantom
 Hue Shift Phantom
 Aero Phantom
@@ -221,16 +241,23 @@ Lightwave Phantom
 Random Favorite Skin
 Orion Phantom
 Sentinels of Light Phantom
+Shellspire Phantom
 Snowfall Phantom
 Reaver Phantom
+Sovereign Phantom
 Recon Phantom
+Mystbloom Phantom
 Infinity Phantom
 Reverie Phantom
 Standard Phantom
+Fortune's Hand Phantom
 Tigris Phantom
 BlastX Phantom
 Winterwunderland Phantom
+Convergence Phantom
+MK.VII Liberty Judge
 Piedra del Sol Judge
+Bumble Brigade Judge
 Undercity Judge
 Glitchpop Judge
 ChronoVoid Judge
@@ -243,6 +270,7 @@ Shimmer Judge
 Digihex Judge
 Goldwing Judge
 Hydrodip Judge
+Bubble Pop Judge
 Outpost Judge
 Bound Judge
 Prism III Judge
@@ -262,6 +290,8 @@ Sensation Judge
 Random Favorite Skin
 Silhouette Judge
 Snowfall Judge
+Sovereign Judge
+Mystbloom Judge
 Standard Judge
 Tilde Judge
 Gridcrash Judge
@@ -282,7 +312,9 @@ Monarch Bucky
 Hydrodip Bucky
 Prime//2.0 Bucky
 Prism II Bucky
+Retrowave Bucky
 Kingdom Bucky
+Aemondir Bucky
 Iridian Thorn Bucky
 Magepunk Bucky
 Overdrive Bucky
@@ -321,6 +353,7 @@ Couture Frenzy
 Blush Frenzy
 Nunca Olvidados Frenzy
 Celestial Frenzy
+Tacti-Series Frenzy
 Coalition: Cobra Frenzy
 Moondash Frenzy
 Ion Frenzy
@@ -333,10 +366,14 @@ Sensation Frenzy
 Random Favorite Skin
 Orion Frenzy
 Silhouette Frenzy
+Shellspire Frenzy
+Sovereign Frenzy
 Titanmail Frenzy
 Live Wire Frenzy
 Standard Frenzy
 BlastX Frenzy
+Holomoku Frenzy
+Convergence Frenzy
 Resolution Classic
 Fiber Optic Classic
 RGX 11z Pro Classic
@@ -358,6 +395,7 @@ FIRE/arm Classic
 Goldwing Classic
 Prime Classic
 Avalanche Classic
+Bubble Pop Classic
 Black.Market Classic
 Bound Classic
 Prism III Classic
@@ -366,7 +404,9 @@ Kohaku & Matsuba Classic
 Smite Classic
 Daydreams Classic
 Spline Classic
+Tacti-Series Classic
 Galleria Classic
+Switchback Classic
 Cryostasis Classic
 9 Lives Classic
 Premiere Collision Classic
@@ -379,12 +419,59 @@ Infinity Classic
 Reverie Classic
 Standard Classic
 Final Chamber Classic
+VCT x 100T Classic
+VCT x AG Classic
+VCT x BBL Classic
+VCT x BLD Classic
+VCT x BLG Classic
+VCT x C9 Classic
+VCT x DFM Classic
+VCT x DRG Classic
+VCT x DRX Classic
+VCT x EDG Classic
+VCT x EG Classic
+VCT x FNC Classic
+VCT x FPX Classic
+VCT x FUR Classic
+VCT x FUT Classic
+VCT x G2 Classic
+VCT x GEN Classic
+VCT x GE Classic
+VCT x GX Classic
+VCT x JDG Classic
+VCT x KC Classic
+VCT x KOI Classic
+VCT x KRÜ Classic
+VCT x LEV Classic
+VCT x LOUD Classic
+VCT x M8 Classic
+VCT x MIBR Classic
+VCT x NAVI Classic
+VCT x NOVA Classic
+VCT x NRG Classic
+VCT x PRX Classic
+VCT x RRQ Classic
+VCT x SEN Classic
+VCT x T1 Classic
+VCT x TE Classic
+VCT x TEC Classic
+VCT x TH Classic
+VCT x TL Classic
+VCT x TLN Classic
+VCT x TS Classic
+VCT x TYL Classic
+VCT x VIT Classic
+VCT x WOL Classic
+VCT x ZETA Classic
+Flutter Ghost
 Fiber Optic Ghost
 VALORANT GO! Vol. 1 Ghost
 Radiant Entertainment System Ghost
 Gaia's Vengeance Ghost
 Endeavour Ghost
 Piedra del Sol Ghost
+Bumble Brigade Ghost
+Comet Ghost
 Starlit Odyssey Ghost
 Topotek Ghost
 Spitfire Ghost
@@ -394,6 +481,7 @@ Soulstrife Ghost
 Digihex Ghost
 Infantry Ghost
 Goldwing Ghost
+XERØFANG Ghost
 Outpost Ghost
 Prism Ghost
 Serenity Ghost
@@ -414,8 +502,10 @@ Sovereign Ghost
 Recon Ghost
 Cavalier Ghost
 Standard Ghost
+Evori Dreamwings Ghost
 Freehand Ghost
 Gridcrash Ghost
+Fortune's Hand Ghost
 NO LIMITS Ghost
 Depths Ghost
 Ego Ghost
@@ -425,6 +515,7 @@ Soul Silencer Ghost
 Wayfarer Sheriff
 Mythmaker Sheriff
 Immortalized Sheriff
+RGX 11z Pro Sheriff
 Altitude Sheriff
 Aristocrat Sheriff
 Composite Sheriff
@@ -438,7 +529,9 @@ Surge Sheriff
 Neo Frontier Sheriff
 Protektor Sheriff
 Prism II Sheriff
+Retrowave Sheriff
 K/TAC Sheriff
+Aemondir Sheriff
 Monstrocity Sheriff
 Iridian Thorn Sheriff
 Magepunk Sheriff
@@ -459,7 +552,9 @@ Sakura Sheriff
 Peacekeeper Sheriff
 Schema Sheriff
 Reaver Sheriff
+Mystbloom Sheriff
 Standard Sheriff
+Cloudweaver Sheriff
 Sandswept Sheriff
 Convex Sheriff
 Varnish Sheriff
@@ -479,9 +574,11 @@ Chromedek Shorty
 Hivemind Shorty
 Velocity Shorty
 Ruin Shorty
+Primordium Shorty
 Monarch Shorty
 Guardrail Shorty
 Prism II Shorty
+Aquatica Shorty
 Wunderkind Shorty
 Genesis Shorty
 Oni Shorty
@@ -493,6 +590,7 @@ Transition Shorty
 Standard Shorty
 Aerosol Shorty
 Tilde Shorty
+Cloudweaver Shorty
 Tigris Shorty
 Wayfinder Shorty
 Wasteland Shorty
@@ -501,6 +599,7 @@ Intergrade Operator
 VALORANT GO! Vol. 2 Operator
 Araxys Operator
 Radiant Entertainment System Operator
+MK.VII Liberty Operator 
 Endeavour Operator
 Origin Operator
 Striker Operator
@@ -515,6 +614,7 @@ Team Ace Operator
 Spitfire Operator
 Infantry Operator
 Prism Operator
+Retrowave Operator
 K/TAC Operator
 Kohaku & Matsuba Operator
 Blush Operator
@@ -536,6 +636,7 @@ Sentinels of Light Operator
 Reaver Operator
 Tethered Realms Operator
 Cavalier Operator
+Mystbloom Operator
 Standard Operator
 Aerosol Operator
 Tilde Operator
@@ -547,6 +648,7 @@ Intergrade Guardian
 VALORANT GO! Vol. 1 Guardian
 Neptune Guardian
 Gaia's Vengeance Guardian
+MK.VII Liberty Guardian
 Spectrum Guardian
 Starlit Odyssey Guardian
 Nebula Guardian
@@ -559,10 +661,12 @@ Soulstrife Guardian
 Infantry Guardian
 Hydrodip Guardian
 Prime Guardian
+Bubble Pop Guardian
 Guardrail Guardian
 Ruination Guardian
 Blush Guardian
 Magepunk Guardian
+Tacti-Series Guardian
 Signature Guardian
 Galleria Guardian
 Moondash Guardian
@@ -574,6 +678,7 @@ Jigsaw Guardian
 Random Favorite Skin
 Panoramic Guardian
 Silhouette Guardian
+Shellspire Guardian
 Reaver Guardian
 Tethered Realms Guardian
 Sovereign Guardian
@@ -581,11 +686,16 @@ Recon Guardian
 Infinity Guardian
 Reverie Guardian
 Standard Guardian
+Fortune's Hand Guardian
 Ego Guardian
+RGX 11z Pro Outlaw
 Prism//Reloaded Outlaw
+Aquatica Outlaw
 Random Favorite Skin
 Standard Outlaw
+Cloudweaver Outlaw
 Ego Outlaw
+Holomoku Outlaw
 Task Force 809 Marshal
 Fiber Optic Marshal
 Gaia's Vengeance Marshal
@@ -602,12 +712,14 @@ Avalanche Marshal
 Black.Market Marshal
 Couture Marshal
 Magepunk Marshal
+Tacti-Series Marshal
 Signature Marshal
 Coalition: Cobra Marshal
 Galleria Marshal
 Crimsonbeast Marshal
 Moondash Marshal
 Kuronami Marshal
+Switchback Marshal
 POLYfrog Marshal
 Divine Swine Marshal
 Artisan Marshal
@@ -621,6 +733,7 @@ Freehand Marshal
 Sandswept Marshal
 Wasteland Marshal
 Winterwunderland Marshal
+Convergence Marshal
 Task Force 809 Spectre
 Fiber Optic Spectre
 RGX 11z Pro Spectre
@@ -628,6 +741,7 @@ Intergrade Spectre
 VALORANT GO! Vol. 1 Spectre
 Neptune Spectre
 Striker Spectre
+Comet Spectre
 Radiant Crisis 001 Spectre
 Starlit Odyssey Spectre
 Emberclad Spectre
@@ -639,6 +753,7 @@ Venturi Spectre
 Forsaken Spectre
 Velocity Spectre
 Soulstrife Spectre
+Primordium Spectre
 Infantry Spectre
 Horizon Spectre
 Prime Spectre
@@ -663,10 +778,12 @@ Luna Spectre
 Random Favorite Skin
 Gravitational Uranium Neuroblaster Spectre
 Sentinels of Light Spectre
+Shellspire Spectre
 Reaver Spectre
 Recon Spectre
 Infinity Spectre
 Standard Spectre
+Evori Dreamwings Spectre
 Freehand Spectre
 Tigris Spectre
 NO LIMITS Spectre
@@ -686,12 +803,14 @@ Surge Stinger
 Shimmer Stinger
 .SYS Stinger
 Prism II Stinger
+Aquatica Stinger
 Couture Stinger
 Signature Stinger
 Overdrive Stinger
 Silvanus Stinger
 Moondash Stinger
 Libretto Stinger
+Switchback Stinger
 Sensation Stinger
 Random Favorite Skin
 Sakura Stinger
@@ -702,12 +821,15 @@ Sovereign Stinger
 Cavalier Stinger
 Standard Stinger
 Gridcrash Stinger
+Cloudweaver Stinger
 Depths Stinger
 Ego Stinger
 Varnish Stinger
+Convergence Stinger
 Task Force 809 Knife
 RGX 11z Pro Blade
 RGX 11z Pro Firefly
+RGX 11z Pro Karambit
 Altitude Knuckle Knife
 Xenohunter Knife
 Intergrade Blade
@@ -718,6 +840,7 @@ Neptune Anchor
 Power Fist
 Gaia's Wrath
 Gaia's Fury
+MK.VII Liberty Combat Knife
 Waveform
 Obsidiana
 Composite Knife
@@ -726,6 +849,7 @@ Champions 2022 Butterfly Knife
 Champions 2023 Kunai
 Origin Crescent Blade
 Striker Knife
+Comet Sword
 Radiant Crisis 001 Baseball Bat
 Nebula Knife
 Hack
@@ -750,8 +874,11 @@ Ruin Dagger
 .SYS Melee
 Neo Frontier Axe
 Soulstrife Scythe
+Blades of Primordia
 Prime Axe
 Prime//2.0 Karambit
+XERØFANG Knife
+Bubble Pop Light Stick
 Outpost Melee
 Guardrail Hammer
 Black.Market Butterfly Knife
@@ -762,6 +889,7 @@ Broken Blade of the Ruined King
 Kingdom Knife
 K/TAC Blade
 Equilibrium
+Blade of Aemondir
 Smite Knife
 Daydreams Crowbar
 Catrina
@@ -781,6 +909,7 @@ Ion Energy Sword
 Ion Karambit
 Oni Claw
 Onimaru Kunitsuna
+Switchback Ascender
 Cryostasis Impact Drill
 Artisan Foil
 Personal Administrative Melee Unit
@@ -790,21 +919,27 @@ Gravitational Uranium Neuroblaster Baton
 Orion Sword
 Relic of the Sentinel
 Relic Stone Daggers
+Shellspire Sword
 Transition Knife
 Snowfall Wand
 Reaver Knife
 Reaver Karambit
 Prosperity
 Sovereign Sword
+Eternal Sovereign
 Recon Balisong
 Titanmail Mace
+Mystbloom Kunai
 Reverie Sword
 Melee
+Evori's Spellcaster
 Tilde Knife
+Fortune's Scepter 
 Hu Else
 NO LIMITS Bat
 Sandswept Dagger
 BlastX Polymer KnifeTech Coated Knife
 Ego Knife
+Kaimana
 Ignite Fan
 Winterwunderland Candy Cane

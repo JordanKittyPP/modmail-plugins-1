@@ -1,6 +1,7 @@
 import asyncio
 import os
 import random
+import re
 from datetime import datetime, timedelta
 from typing import Dict, List
 
@@ -184,6 +185,12 @@ COOLDOWN_OVER = [
     "Rested and ready! The button awaits your clicking prowess.",
     "Button's ready for some action. Let the clicking commence!",
     "Cooldown's done. The button is hungry for clicks.",
+    (
+        "We are one click away from reaching ",
+        lambda x: total_clicks(x) + 1,
+        " total clicks.",
+    ),
+    ("I have only been clicked ", total_clicks, " times. :("),
 ]
 
 
@@ -202,6 +209,11 @@ def random_cooldown_over(stats: Stats) -> str:
                     players,
                     " happy button clickers! Please join in!",
                 ),
+                (
+                    "To the ",
+                    players,
+                    " people who have already clicked the button: click it again.",
+                ),
             ]
         )
     if stats.streak:
@@ -216,6 +228,25 @@ def random_cooldown_over(stats: Stats) -> str:
                     streak_mention,
                     ", you are one click away from reaching a streak of ",
                     lambda x: streak_amount(x) + 1,
+                ),
+                (
+                    "How does ",
+                    streak_mention,
+                    " have a ",
+                    streak_amount,
+                    " streak??",
+                ),
+                (
+                    "Please prevent ",
+                    streak_mention,
+                    " from continuing their streak.",
+                ),
+                (
+                    "Where is everyone else? ",
+                    streak_mention,
+                    " has clicked ",
+                    streak_amount,
+                    " times in a row!",
                 ),
             ]
         )
@@ -312,6 +343,14 @@ def random_rps_win() -> str:
     else:
         two = choices[choice - 1]
     return f"{one} against {{}}'s {two}"
+
+
+def random_tone_indicators(rolls: int = 19) -> str:
+    tone = {random_line("tone_indicators.txt")}
+    for x in range(rolls):
+        if random.random() < 0.05:
+            tone.add(random_line("tone_indicators.txt"))
+    return " ".join(tone)
 
 
 MONTHS = [
@@ -732,6 +771,43 @@ FOUGHT_OFF = [
         lambda: random.randint(1, 2889),
         ">)",
     ),
+    (
+        "placed first by playing ",
+        lambda: random_line("tft_comps.txt"),
+        " against",
+    ),
+    (
+        "used the tone indicators ",
+        lambda: random_tone_indicators(40),
+        " when talking to",
+    ),
+    ("beat {} by playing vertical ", lambda: random_line("tft_traits.txt")),
+    ("attempted reroll ", lambda: random_line("tft_traits.txt"), " against"),
+    "hit",
+    (
+        "played their favourite trait, ",
+        lambda: random_line("tft_traits.txt"),
+        ", in a lobby with",
+    ),
+    ("pulled for ", lambda: random_line("star_rail_characters.txt"), " with"),
+    (
+        "obtained eidolon ",
+        lambda: random.randint(1, 6),
+        " ",
+        lambda: random_line("star_rail_characters.txt"),
+        ", going against {}'s wishes",
+    ),
+    "pulled",
+    "answered {}'s prayers",
+    "started picking {}'s brain",
+    "drove {} up the wall",
+    "met {} in the wrong place at the wrong time",
+    "met {} in the right place at the right time",
+    "queued against",
+    "inherited pseudopseudohypoparathyroidism from",
+    "performed multiple stereoelectroencephalographies on",
+    "synthesized tetramethylenedisulfotetramine with",
+    "created hexanitrohexaazaisowurtzitane as a gift for",
 ]
 
 SINGULAR_FOUGHT_OFF = [
@@ -765,7 +841,41 @@ SINGULAR_FOUGHT_OFF = [
     ("enjoyed a {}-free ", lambda: MONTHS[datetime.now().month - 1]),
     "sang a duet at karaoke with {}",
     ("played ", random_rps_win),
+    (
+        "beat {}'s ",
+        lambda: random_line("tft_comps.txt"),
+        " comp with ",
+        lambda: random_line("tft_comps.txt"),
+    ),
+    (
+        "borrowed {}'s support character ",
+        lambda: random_line("star_rail_characters.txt"),
+    ),
+    "created daylight between themself and",
+    "had a heated debate with {} from the Department of the Bleeding Obvious",
 ]
+
+
+def uppercase_except_links(text):
+    parts = re.split(r"(<.*?>)", text)
+
+    for i in range(len(parts)):
+        if not parts[i].startswith("<"):
+            parts[i] = parts[i].upper()
+
+    return "".join(parts)
+
+
+def randomcase_except_links(text):
+    parts = re.split(r"(<.*?>)", text)
+
+    for i in range(len(parts)):
+        if not parts[i].startswith("<"):
+            parts[i] = "".join(
+                random.choice((str.upper, str.lower))(char) for char in parts[i]
+            )
+
+    return "".join(parts)
 
 
 async def random_fought_off(amount: int) -> str:
@@ -789,7 +899,9 @@ async def random_fought_off(amount: int) -> str:
     if "{}" in verb:
         return " " + verb
     if random.random() < 0.1:
-        verb = verb.upper()
+        verb = uppercase_except_links(verb)
+    elif random.random() < 0.05:
+        verb = randomcase_except_links(verb)
     if random.random() < 0.1:
         verb = "**" + verb + "**"
     if random.random() < 0.1:
@@ -808,11 +920,15 @@ ENDING_PUNCTUATION = [
     "~",
     "...",
     "!!!",
+    "",
+    "‽",
 ]
 
 
 def random_ending_punctuation() -> str:
-    return random.choices(ENDING_PUNCTUATION, cum_weights=(4, 5, 6, 7, 8, 9, 10, 11))[0]
+    return random.choices(
+        ENDING_PUNCTUATION, cum_weights=(4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    )[0]
 
 
 GOT_A_CLICK = [
@@ -823,10 +939,24 @@ GOT_A_CLICK = [
     "clicked successfully",
     "clicked the button",
     "obtained a click",
+    "clicked me",
+    "clicked to get a point",
+    "got a point",
+    "got another click",
+    "acquired a click",
+    "earned a click",
+    "gained a click",
 ]
 
 
 def random_got_a_click() -> str:
+    if random.random() < 0.01:
+        return (
+            random.choice(GOT_A_CLICK)
+            + random_ending_punctuation()
+            + " "
+            + random_tone_indicators()
+        )
     return random.choice(GOT_A_CLICK) + random_ending_punctuation()
 
 

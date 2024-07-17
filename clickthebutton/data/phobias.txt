@@ -29,6 +29,7 @@ Americanophobia
 Americophobia
 amoebophobia
 anatidaephobia
+ancraophobia
 androphobia
 anemophobia
 Anglophobia
@@ -46,7 +47,6 @@ Arabophobia
 arachibutyrophobia
 arachnophobia
 araneophobia
-arantiophobia
 arithmophobia
 Armenophobia
 arophobia
@@ -71,6 +71,7 @@ bacillophobia
 bacteriophobia
 Balkanophobia
 bananaphobia
+barophobia
 basophobia
 bathmophobia
 bathophobia
@@ -111,7 +112,6 @@ chrematophobia
 Christianophobia
 Christophobia
 chrometophobia
-chromophobia
 chronomentrophobia
 chrysophobia
 cibophobia
@@ -142,6 +142,7 @@ cyanophobia
 cyberphobia
 Cymrophobia
 cynophobia
+cypridophobia
 decidophobia
 defecalgesiophobia
 deipnophobia
@@ -165,6 +166,7 @@ Dubyaphobia
 Dutchphobia
 dykephobia
 dysmorphophobia
+dystychiphobia
 ecclesiophobia
 econophobia
 ecophobia
@@ -206,6 +208,7 @@ gelotophobia
 genderphobia
 genophobia
 Georgianophobia
+Georgiophobia
 gephyrophobia
 gerascophobia
 Germanophobia
@@ -213,7 +216,6 @@ germophobia
 gerontophobia
 gingerphobia
 globophobia
-glossophobia
 gnomophobia
 gonophobia
 grammatophobia
@@ -280,6 +282,7 @@ Italophobia
 ithyphallophobia
 Japanophobia
 Judeophobia
+juvenophobia
 kainotophobia
 kakorrhaphiophobia
 kathisophobia
@@ -313,6 +316,8 @@ mageiricophobia
 maieusiophobia
 Malayophobia
 maniaphobia
+mathophobia
+mathphobia
 matrophobia
 mechanophobia
 medicophobia
@@ -327,6 +332,7 @@ metrophobia
 Mexiphobia
 microbiophobia
 microphobia
+molluscophobia
 monologophobia
 monophobia
 moralphobia
@@ -341,12 +347,12 @@ musophobia
 mycophobia
 myrmecophobia
 mysophobia
+Naziphobia
 necrophobia
 Negrophobia
 neopharmaphobia
 neophobia
 nephophobia
-Nipponophobia
 noctiphobia
 noctophobia
 nomophobia
@@ -417,7 +423,10 @@ pomophobia
 ponophobia
 porcophobia
 pornophobia
+posthephobia
 potamophobia
+pozphobia
+praeputiophobia
 pronounphobia
 psychophobia
 psychrophobia
@@ -428,9 +437,12 @@ queerphobia
 radiophobia
 ranidaphobia
 rectophobia
+reeferphobia
 rhabdophobia
 rhypophobia
+rhytiphobia
 robophobia
+rodentophobia
 Romaphobia
 rupophobia
 Russiaphobia
@@ -465,6 +477,7 @@ snakephobia
 sociophobia
 Somaliphobia
 somatophobia
+somniphobia
 sonophobia
 sophophobia
 spectrophobia
@@ -483,7 +496,6 @@ taphophobia
 taurophobia
 technophobia
 teleophobia
-telephonophobia
 teratophobia
 tetraphobia
 Teutonophobia
@@ -504,6 +516,7 @@ tropophobia
 Trumphobia
 Trumpophobia
 truthaphobia
+truthophobia
 trypanophobia
 trypophobia
 tyrannophobia
@@ -512,6 +525,7 @@ uranophobia
 uxorophobia
 vaccinophobia
 vaginaphobia
+vegaphobia
 vegephobia
 venereophobia
 venustraphobia

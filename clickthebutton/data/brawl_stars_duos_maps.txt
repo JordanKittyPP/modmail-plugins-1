@@ -1,76 +1,83 @@
 # https://api.brawlapi.com/v1/maps
-Dune Drift
 Double Trouble
-Cavern Churn
-The Galaxy
-Stormy Plains
 Skull Creek
-Safety Center
+Scorched Stone
+Rockwall Brawl
+Feast Or Famine
+Acid Lakes
+Cavern Churn
+Island Invasion
+Hot Maze
+Dune Drift
+Stormy Plains
+Dark Passage
+Ghost Point
+Erratic Blocks
+River Rush
+Eye Of The Storm
+Flying Fantasies
+Royal Runway
+Superstar
+Deserted Vertex
+Outrageous Outback
+Barren Badlands
+Critical Crossing
+Skull Creek
+Hot Maze
+Acid Lakes
+Ghost Point
 Forsaken Falls
 Dark Passage
-Dried Up River
-Acid Lakes
-Feast Or Famine
-Rockwall Brawl
-Flying Fantasies
-Island Invasion
 Eye Of The Storm
-Scorched Stone
-Two Thousand Lakes
-Risky Cliffs
-Zoomed Out
-Hard Limits
-Lush Poles
-Skull Creek
-Ghost Point
-River Rush
-Superstar
-Erratic Blocks
-Outrageous Outback
-Boxed In
-Royal Runway
 Point Of View
-Canyon Rivers
-Grassy Gorge
-Eggshell
-The Mortuary
-Hot Maze
-Canyon Rivers
-Mystic Touch
-Dark Fantasies
-Clash Colosseum
-Two Thousand Lakes
-Grassy Gorge
-Victor Valley
-Will Of The Wisp
-Eggshell
-Shadow Spirits
-Riverside Ring
-Clash Colosseum
-Victor Valley
-Dark Passage
-Nruhc Nrevac
-Treasure Hunt
-Shadow Spirits
-Will Of The Wisp
-Riverside Ring
-Cavern Churn
-Core Crumble
-Stocky Stockades
-Thousand Lakes
-Rocky Blocks
 Circular Canyon
-Eye Of The Storm
-Ghost Point
-Acid Lakes
-Critical Crossing
-Deserted Vertex
-Barren Badlands
-Hot Maze
+Rocky Blocks
+Stocky Stockades
+Safety Center
+Core Crumble
+Treasure Hunt
+Two Thousand Lakes
+Cavern Churn
+Thousand Lakes
+Nruhc Nrevac
+Riverside Ring
+Shadow Spirits
+Eggshell
+Will Of The Wisp
+Victor Valley
+Grassy Gorge
+Two Thousand Lakes
+Clash Colosseum
+Riverside Ring
+Shadow Spirits
+Eggshell
+Will Of The Wisp
+Victor Valley
+Grassy Gorge
+Clash Colosseum
+The Galaxy
+Dark Fantasies
+Risky Cliffs
 Ignition
+Mystic Touch
 Trap Map
+Dried Up River
+Canyon Rivers
+Canyon Rivers
+The Mortuary
 Jump Park
 Brawler Speedway
 Teleport Tag
+Boxed In
+Zoomed Out
+Lush Poles
+Hard Limits
 Vicious Vortex
 Descending Dimensions
+Marksmans Paradise
+Desert Tendrils
+Feast Or Famine
+Island Invasion
+Fiftyfive
+Leaping Frogs
+Final Four

@@ -1,100 +1,112 @@
 # https://api.brawlapi.com/v1/maps
-Dune Drift
-Flaring Phoenix
-Riverbed
-Encirclement
 Shooting Star
-Great Waves
-Close Call
-Double Trouble
-Close Quarters
-Checkered
-Machine Zone
-Power Shot
-Trials And Tribulations
-Slippery Road
-Arene En Folie
-Cavern Churn
-Bridge Too Far
-Belles Rock
-Backyard Bowl
-Layer Bake
-Arctic Extraction
-Stay In Your Lane
-The Galaxy
-Waters Of Doom
-The Great Divide
-Winter Party
-Omega
-Freezing Ripples
-Open Space
-Stormy Plains
-Tornado Ring
-Out In The Open
-Triple Dribble
-The Great Open
-Minecart Madness
-Skull Creek
-Ring Of Fire
-New Perspective
-Retina
-True Trail
-Last Stop
-Safety Center
-Safe Zone
-Healthy Middle Ground
-Off The Line
-Snake Prairie
 Hard Rock Mine
-Forsaken Falls
-Goldarm Gulch
-Open Zone
-Galaxy Arena
-Hunting Season
-Double Swoosh
-Last Stand
-Frosty Tracks
-Icy Ice Park
-Cool Shapes
-Danger Zone
-Cold Pond Quarry
-Snowman Forest
-Team Day
-X Marks The Spot
-Field Goal
-Devils Pass
-Dark Passage
-Hot Potato
-Deep Diner
-Super Beach
-Layer Cake
-Pool Party
-Temple Of Boom
-Infinite Doom
-Dried Up River
-Battered Battlefield
-Iron Bars
-Deadly Deflections
-Stacking
-Stepping Stones
-On The Train
-Over The Top
-Dueling Beetles
-Sneaky Fields
-Cheeky Chokepoint
+Deathcap Trap
 Gem Fort
-Acid Lakes
-Pinhole Punt
-Crystal Arcade
-Feast Or Famine
-Split
-Eyes On The Ground
+Undermine
+Skull Creek
 Rockwall Brawl
+Feast Or Famine
 Kaboom Canyon
-Slayers Paradise
-Snowflakes
+Safe Zone
+Hideout
+G.g. Mortuary
+Backyard Bowl
+Cavern Churn
+Double Trouble
+Sneaky Fields
+Super Beach
+Hot Potato
+Canal Grande
+Stormy Plains
+Dark Passage
+Double Swoosh
+Pinball Dreams
+Minecart Madness
 Flying Fantasies
-Maze Creep
-Daylight Robbery
-Trophy Trespass
-Coarse Course
+Center Stage
+Beach Ball
+Sunny Soccer
+Acute Angle
+Safety Center
+Penalty Kick
+Open Business
+Parallel Plays
+Ring Of Fire
+Dueling Beetles
+Rustic Arcade
+Goldarm Gulch
+Belles Rock
+Retina
+Deep End
+Flaring Phoenix
+Meadow Of The Crane
+Monkey Maze
+Infinite Doom
+Slayers Paradise
+Open Space
+Out In The Open
+No Excuses
+Last Stop
+Freezing Ripples
+Great Waves
+Cool Shapes
+Arctic Extraction
+Snowman Forest
+Cold Pond Quarry
+Snowflakes
+Slippery Road
+Icy Ice Park
+Frosty Tracks
+Breakwater Port
+Bounce Bazaar
+Circling Sands
+Sizzling Chambers
+New Horizons
+Goalkeepers Dream
+Hardihood Hideaway
+Crispy Crypt
+Fiftyfive
+Between The Rivers
+Four Levels
+Burning Flares
+Color Me Intrigued
+Shuffle City
+Sizzling Chambers
+Crispy Crypt
+Shuffle City
+Rusty Rebound
+Spring Back Alley
+Touch Up Tavern
+Skull Creek
+Skull Creek
+Camping Grounds
+Greasepaint Grass
+Dye Direct
+Chromatic Cress
+Spots Of Yore
+Tint Terrace
+Flank Attack
+Iris Intervention
+Spider Crawler
+Offside Trap
+Sneaky Sneak
+Ahead Of The Curve
+Diamond Dome
+Double Locking
+Reflections
+Local Businesses
+Dragon Jaws
+Twilight Passage
+Hard Lane
+Island Hopping
+Leaping Frogs
+Final Four
+Spice Production
+Coconut Cove
+Scorched Stone
+Rockwall Brawl
+Feast Or Famine
+Acid Lakes
+Cavern Churn
+Double Trouble

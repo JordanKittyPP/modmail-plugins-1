@@ -1,4 +1,10 @@
 # https://api.brawlapi.com/v1/brawlers
+Clancy
+Berry
+Lily
+Draco
+Angelo
+Melodie
 Larry & Lawrie
 Kit
 Mico
