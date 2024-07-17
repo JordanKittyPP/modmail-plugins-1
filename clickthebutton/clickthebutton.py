@@ -15,7 +15,8 @@ from matplotlib import font_manager
 from core import checks
 from core.models import PermissionLevel
 
-from .responses import random_divider
+from .responses import random_cooldown_over, random_divider
+from .stats import Stats
 from .utils import event
 from .views import PersistentView
 
@@ -117,6 +118,19 @@ class ClickTheButton(commands.Cog):
                         )
                         await self.message.edit(
                             embed=await self.create_leaderboard_embed(), view=self.view
+                        )
+                        asyncio.create_task(
+                            self.message.channel.send(
+                                random_cooldown_over(
+                                    Stats(
+                                        self.streak,
+                                        self.leaderboard,
+                                        self.get_sorted_leaderboard(),
+                                    )
+                                ),
+                                delete_after=0,
+                                allowed_mentions=discord.AllowedMentions.none(),
+                            )
                         )
                     except:
                         pass
