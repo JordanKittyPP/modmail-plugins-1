@@ -405,20 +405,24 @@ class AnimeGuesser(commands.Cog):
 
         stdout2, stderr2 = await proc2.communicate()
 
-        embed = discord.Embed(
-            colour=embed_colour,
-            description="View the [source code](https://github.com/RealCyGuy/modmail-plugins/blob/v4/animeguesser/animeguesser.py) to debug this more.",
-        )
-        embed.set_author(name="FFmpeg apt-get installation output")
-        embed.add_field(
+        embeds = [
+            discord.Embed(
+                colour=embed_colour,
+                description="View the [source code](https://github.com/RealCyGuy/modmail-plugins/blob/v4/animeguesser/animeguesser.py) to debug this more.",
+            )
+        ]
+        embeds[0].set_author(name="FFmpeg apt-get installation output")
+        embeds[0].add_field(
             name="apt-get update",
             value=f"Output:\n```\u200b{stdout.decode()}```Errors:\n```\u200b{stderr.decode()}```",
         )
-        embed.add_field(
+        embeds.append(discord.Embed(colour=embed_colour))
+        embeds[1].add_field(
             name="apt-get install ffmpeg",
             value=f"Output:\n```\u200b{stdout2.decode()}```Errors:\n```\u200b{stderr2.decode()}```",
         )
-        await ctx.send(embed=embed)
+        for embed in embeds:
+            await ctx.send(embed=embed)
 
 
 async def setup(bot):
