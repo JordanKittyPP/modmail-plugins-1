@@ -237,7 +237,7 @@ class AnimeGuesser(commands.Cog):
                 if title_length >= 7:
                     await reveal_characters(int(title_length / 7))
             elif hint == 19:
-                await reveal_characters(max(int(title_length / 4), 1))
+                await reveal_characters(max(int(title_length / 2), 1))
 
         embed = discord.Embed(colour=embed_colour, description="5 seconds left!")
         await ctx.send(embed=embed)
