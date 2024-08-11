@@ -315,37 +315,25 @@ class AnimeGuesser(commands.Cog):
                     + f"/tiddies?provider={provider_id}&id={anilist_id}&num={episode[1]}&subType=sub&watchId={episode[0]}"
                 ) as resp:
                     episode_data = await resp.json()
-                    # m3u8_url = episode_data["sources"][0]["url"]
+                    m3u8_url = episode_data["sources"][0]["url"]
+                async with session.get(m3u8_url) as resp:
+                    variant_m3u8 = m3u8.loads(await resp.text())
+                    variant_m3u8.base_uri = m3u8_url[: m3u8_url.rfind("/") + 1]
+                    if len(variant_m3u8.playlists) == 0:
+                        logger.warning(
+                            f"{m3u8_url} has 0 playlists! Anilist ID: {anilist_id} Skipping..."
+                        )
+                        return
                     lowest_bandwidth = 0
                     lowest_bandwidth_playlist = None
-                    for source in episode_data["sources"]:
+                    for playlist in variant_m3u8.playlists:
+                        playlist: m3u8.Playlist = playlist
                         if (
-                            not source.get("isM3U8", False)
-                            or not source["quality"][:-1].isnumeric()
+                            lowest_bandwidth == 0
+                            or playlist.stream_info.bandwidth < lowest_bandwidth
                         ):
-                            continue
-                        bandwidth = int(source["quality"][:-1])
-                        if lowest_bandwidth == 0 or bandwidth < lowest_bandwidth:
-                            lowest_bandwidth = bandwidth
-                            lowest_bandwidth_playlist = source["url"]
-                # async with session.get(m3u8_url) as resp:
-                #     m3u8_data = await resp.text()
-                #     variant_m3u8 = m3u8.loads(m3u8_data)
-                #     if len(variant_m3u8.playlists) == 0:
-                #         logger.warning(
-                #             f"{m3u8_url} has 0 playlists! Anilist ID: {anilist_id} Skipping..."
-                #         )
-                #         return
-                #     lowest_bandwidth = 0
-                #     lowest_bandwidth_playlist = None
-                #     for playlist in variant_m3u8.playlists:
-                #         playlist: m3u8.Playlist = playlist
-                #         if (
-                #             lowest_bandwidth == 0
-                #             or playlist.stream_info.bandwidth < lowest_bandwidth
-                #         ):
-                #             lowest_bandwidth = playlist.stream_info.bandwidth
-                #             lowest_bandwidth_playlist = playlist.absolute_uri
+                            lowest_bandwidth = playlist.stream_info.bandwidth
+                            lowest_bandwidth_playlist = playlist.absolute_uri
                 async with session.get(lowest_bandwidth_playlist) as resp:
                     m3u8_obj = m3u8.loads(await resp.text())
                     m3u8_obj.base_uri = lowest_bandwidth_playlist[
