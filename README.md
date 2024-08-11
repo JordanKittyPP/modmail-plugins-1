@@ -26,7 +26,7 @@ Install: `?plugins install realcyguy/modmail-plugins/anigame-channels@v4`
 ### animeguesser
 ````
 An anime guessing game plugin featuring automatically extracted random frames from anime.
-Inspired by RinBot and utilizing AniList and Enime APIs.
+Inspired by RinBot and utilizes AniList, Find My Anime, and Gojo APIs.
 ````
 Source code: [`animeguesser.py`](https://github.com/RealCyGuy/modmail-plugins/blob/v4/animeguesser/animeguesser.py "animeguesser source code")  
 Install: `?plugins install realcyguy/modmail-plugins/animeguesser@v4`
