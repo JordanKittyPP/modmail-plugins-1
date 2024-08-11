@@ -1,21 +1,20 @@
 import asyncio
+import difflib
 import io
 import random
 from collections import Counter
-import difflib
 from datetime import datetime
 from typing import List, Optional, Set
-import xml.etree.ElementTree as ET
 
 import aiohttp
 import discord
 import ffmpeg
-from discord.ext import commands, tasks
 import m3u8
+from discord.ext import commands, tasks
 
 from bot import ModmailBot
 from core import checks
-from core.models import getLogger, PermissionLevel
+from core.models import PermissionLevel, getLogger
 
 logger = getLogger(__name__)
 
@@ -47,9 +46,8 @@ query ($page: Int) {
 }
 """
 anilist_api = "https://graphql.anilist.co"
-enime_api = "https://api.enime.moe"
-# https://github.com/Enime-Project/enime.moe/blob/master/components/player/index.tsx
-nade_cdn = "https://cdn.nade.me/generate"
+gojo_api = "https://api.gojo.wtf"
+find_my_anime_api = "https://find-my-anime.dtimur.de"
 formats = {
     "TV": "TV series",
     "TV_SHORT": "TV short",
@@ -90,7 +88,7 @@ def simplified_titles(title: str) -> Set[str]:
 class AnimeGuesser(commands.Cog):
     """
     An anime guessing game plugin featuring automatically extracted random frames from anime.
-    Inspired by RinBot and utilizing AniList and Enime APIs.
+    Inspired by RinBot and utilizes AniList, Find My Anime, and Gojo APIs.
     """
 
     def __init__(self, bot: ModmailBot):
@@ -254,8 +252,10 @@ class AnimeGuesser(commands.Cog):
 
             if await self.db.count_documents({}) < 100:
                 await self.add_anime()
-        except Exception as e:
-            logger.exception("add_anime_loop exception! waiting 1 minute before resuming loop")
+        except Exception:
+            logger.exception(
+                "add_anime_loop exception! waiting 1 minute before resuming loop"
+            )
             await asyncio.sleep(60)
 
     async def add_anime(self):
@@ -283,54 +283,74 @@ class AnimeGuesser(commands.Cog):
                 )
                 anime_format = anilist_data["format"]
             async with session.get(
-                enime_api + "/mapping/anilist/" + str(anilist_id)
+                find_my_anime_api
+                + "/api?provider=Anilist&includeAdult=true&collectionConsent=false&id="
+                + str(anilist_id)
+            ) as resp:
+                if resp.ok:
+                    fma_data = await resp.json()
+                    if fma_data:
+                        for answer in fma_data[0]["synonyms"]:
+                            if answer not in answers:
+                                answers.append(answer)
+                else:
+                    logger.warning("Find My Anime API returned a non-200 status code!")
+            async with session.get(
+                gojo_api + "/episodes?id=" + str(anilist_id)
             ) as resp:
                 if not resp.ok:
-                    raise Exception("Enime api response was not okay.")
-                enime_data = await resp.json()
-                if len(enime_data["episodes"]) == 0:
+                    raise Exception("gojo api response was not okay.")
+                gojo_data = await resp.json()
+                episodes_data = gojo_data[0]["episodes"]
+                provider_id = gojo_data[0]["providerId"]
+                if len(episodes_data) == 0:
                     return
                 episodes = Counter()
-                for episode in random.choices(enime_data["episodes"], k=20):
-                    episodes[episode["sources"][0]["id"]] += 1
-                anidb_id = enime_data["mappings"].get("anidb")
-            if anidb_id:
-                async with session.get(anidb_api + str(anidb_id)) as resp:
-                    if resp.ok:
-                        anidb_data = await resp.text()
-                        tree = ET.fromstring(anidb_data)
-                        for answer in tree.find("titles").findall("title"):
-                            if answer.text not in answers:
-                                answers.append(answer.text)
-                    else:
-                        logger.warning("AniDB API returned a non-200 status code!")
+                for episode in random.choices(episodes_data, k=20):
+                    episodes[(episode["id"], episode["number"])] += 1
             images: List[bytes] = []
             for episode, count in episodes.items():
-                async with session.get(enime_api + "/source/" + episode) as resp:
+                async with session.get(
+                    gojo_api
+                    + f"/tiddies?provider={provider_id}&id={anilist_id}&num={episode[1]}&subType=sub&watchId={episode[0]}"
+                ) as resp:
                     episode_data = await resp.json()
-                    url = episode_data["url"]
-                async with session.get(nade_cdn, params={"url": url}) as resp:
-                    m3u8_url = await resp.text()
-                async with session.get(m3u8_url) as resp:
-                    m3u8_data = await resp.text()
-                    variant_m3u8 = m3u8.loads(m3u8_data)
-                    if len(variant_m3u8.playlists) == 0:
-                        logger.warning(
-                            f"{m3u8_url} has 0 playlists! Anilist ID: {anilist_id} Skipping..."
-                        )
-                        return
+                    # m3u8_url = episode_data["sources"][0]["url"]
                     lowest_bandwidth = 0
                     lowest_bandwidth_playlist = None
-                    for playlist in variant_m3u8.playlists:
-                        playlist: m3u8.Playlist = playlist
+                    for source in episode_data["sources"]:
                         if (
-                            lowest_bandwidth == 0
-                            or playlist.stream_info.bandwidth < lowest_bandwidth
+                            not source.get("isM3U8", False)
+                            or not source["quality"][:-1].isnumeric()
                         ):
-                            lowest_bandwidth = playlist.stream_info.bandwidth
-                            lowest_bandwidth_playlist = playlist.absolute_uri
+                            continue
+                        bandwidth = int(source["quality"][:-1])
+                        if lowest_bandwidth == 0 or bandwidth < lowest_bandwidth:
+                            lowest_bandwidth = bandwidth
+                            lowest_bandwidth_playlist = source["url"]
+                # async with session.get(m3u8_url) as resp:
+                #     m3u8_data = await resp.text()
+                #     variant_m3u8 = m3u8.loads(m3u8_data)
+                #     if len(variant_m3u8.playlists) == 0:
+                #         logger.warning(
+                #             f"{m3u8_url} has 0 playlists! Anilist ID: {anilist_id} Skipping..."
+                #         )
+                #         return
+                #     lowest_bandwidth = 0
+                #     lowest_bandwidth_playlist = None
+                #     for playlist in variant_m3u8.playlists:
+                #         playlist: m3u8.Playlist = playlist
+                #         if (
+                #             lowest_bandwidth == 0
+                #             or playlist.stream_info.bandwidth < lowest_bandwidth
+                #         ):
+                #             lowest_bandwidth = playlist.stream_info.bandwidth
+                #             lowest_bandwidth_playlist = playlist.absolute_uri
                 async with session.get(lowest_bandwidth_playlist) as resp:
                     m3u8_obj = m3u8.loads(await resp.text())
+                    m3u8_obj.base_uri = lowest_bandwidth_playlist[
+                        : lowest_bandwidth_playlist.rfind("/") + 1
+                    ]
                     for segment in random.choices(m3u8_obj.segments, k=count):
                         async with session.get(segment.absolute_uri) as resp_2:
                             input_stream = await resp_2.read()
