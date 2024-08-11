@@ -272,7 +272,7 @@ class AnimeGuesser(commands.Cog):
                         answers.append(title)
                 cover_image = anilist_data["coverImage"]["extraLarge"]
                 colour = anilist_data["coverImage"]["color"]
-                title = anilist_data["title"]["userPreferred"]
+                title = anilist_data["title"]["english"]
                 anilist_url = anilist_data["siteUrl"]
                 start_date = int(
                     datetime(
