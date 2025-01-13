@@ -108,7 +108,7 @@ class FileBackup(commands.Cog):
 
         if not hasattr(MongoDBClient, "old_append_log"):
             MongoDBClient.old_append_log = MongoDBClient.append_log
-            MongoDBClient.append_log = append_log_with_backup
+        MongoDBClient.append_log = append_log_with_backup
 
         asyncio.create_task(self._fetch_db())
 
