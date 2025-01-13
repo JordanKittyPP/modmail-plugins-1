@@ -106,8 +106,9 @@ class FileBackup(commands.Cog):
         self.db = bot.plugin_db.get_partition(self)
         self.config = {}
 
-        MongoDBClient.old_append_log = MongoDBClient.append_log
-        MongoDBClient.append_log = append_log_with_backup
+        if not hasattr(MongoDBClient, "old_append_log"):
+            MongoDBClient.old_append_log = MongoDBClient.append_log
+            MongoDBClient.append_log = append_log_with_backup
 
         asyncio.create_task(self._fetch_db())
 
